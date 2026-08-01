@@ -518,7 +518,7 @@ class TestPromptChoiceForConfig:
             no_input=False,  # Ask the user for input
         )
         read_user_choice.assert_called_once_with('orientation', choices, None, '')
-        assert expected_choice == actual_choice
+        assert actual_choice == expected_choice
 
     def test_empty_list_returns_empty_string(self) -> None:
         """Verify empty list returns empty string."""
