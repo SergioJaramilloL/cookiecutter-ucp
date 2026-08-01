@@ -95,7 +95,7 @@ jobs:
       - *setup_uv
       - name: "Test • Python ${{ matrix.python-version }}"
         run: |
-          uv run --python="${{ matrix.python-version }}" --isolated --group test -- pytest
+          uv run --frozen --python="${{ matrix.python-version }}" --isolated --group test -- pytest
 #   test-coverage:
 #     name: Measuring Coverage • macOS (via just, uv, pytest, pytest-pretty, pytest-cov and coverage[toml])
 #     runs-on: macos-latest
